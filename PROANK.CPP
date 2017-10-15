@@ -1,0 +1,1680 @@
+#include<iostream.h>
+#include<conio.h>
+#include<process.h>
+#include<stdio.h>
+#include<graphics.h>
+#include<dos.h>
+#include<stdlib.h>
+
+
+
+int main(void)
+{               clrscr();
+		// VARIABLE DECLARATION
+
+		char ch,choice,period,state;
+		int group;
+
+
+
+ ////////////FRONT PAGE GRAPHICS/////////////
+
+   /* request auto detection */
+   int gdriver = DETECT, gmode, errorcode;
+   int radius;
+
+   /* initialize graphics and local variables */
+   initgraph(&gdriver, &gmode, "c:\\tc\\bgi");
+
+   /* read result of initialization */
+   errorcode = graphresult();
+   if (errorcode != grOk)  /* an error occurred */
+   {
+      printf("Graphics error: %s\n", grapherrormsg(errorcode));
+      printf("Press any key to halt:");
+      getch();
+      exit(1); /* terminate with an error code */
+   }
+
+
+     setbkcolor(15);
+
+
+   setcolor(8);
+   /* draw the circle */
+
+   ///////////////////	boundary
+
+   //boundary horizontal BOTTOM
+for(int i=10 ; i<=626 ; i++)
+   {
+    for(int j=10 ; j<=50 ; j++)
+       {
+	circle(i,470,5);
+       }
+   }
+
+ //boundary horizantal  TOP
+for(i=10 ; i<=626 ; i++)
+   {
+    for(int j=10 ; j<=50 ; j++)
+       {
+	circle(i,10,5);
+       }
+  }
+
+
+
+//boundary vertical
+for(i=10 ; i<=470 ; i++)
+   {
+    for(int j=10 ; j<=50 ; j++)
+       {
+	circle(10,i,5);
+       }
+   }
+
+
+//boundary vertical
+for(i=10 ; i<=470 ; i++)
+   {
+    for(int j=10 ; j<=50 ; j++)
+       {
+	circle(626,i,5);
+       }
+   }
+///////////////
+
+
+/////////////////
+
+ setcolor(1);
+   //P//vertical
+   for( i=40 ; i<=106 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(30,i,7);
+
+	}
+       }
+	//vertical
+
+   for( i=40 ; i<=70 ; i++)
+      {
+
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(65,i,7);
+
+	}
+      }
+
+
+   //horizontal
+
+   for(i=30 ; i<=65 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+		 circle(i,71,7);
+
+	}
+      }
+//horizontal
+   for(i=30 ; i<=65 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(i,37,7);
+
+	}
+      }
+
+
+///////////////////////////////////////////////
+
+       //E horizontal
+   for(i=95 ; i<=135 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(i,36,7);
+
+	}
+      }
+
+  //E horizontal
+   for(i=95 ; i<=135 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(i,72,6);
+
+	}
+      }
+
+
+
+
+     //E horizontal
+   for(i=95 ; i<=135 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(i,104,7);
+
+	}
+      }
+
+
+
+   //E vertical
+   for(i=38 ; i<=100 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(95,i,7);
+
+	}
+      }
+
+////////////////////////////
+   //R vertical
+   for(i=38 ; i<=105 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(165,i,7);
+
+	}
+      }
+
+     //R horizontal
+   for(i=165 ; i<=195 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(i,36,6);
+
+	}
+      }
+
+	//R vertical
+   for(i=38 ; i<=65 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(195,i,7);
+
+	}
+      }
+
+
+     //R horizontal
+   for(i=165 ; i<=195 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(i,70,6);
+
+	}
+      }
+
+      //R slanting
+for( i=165 ; i<=200 ; i++)
+      {
+
+
+	 for(int j=10 ; j<=100 ; j++)
+
+	    {
+
+	       circle(i,i-95,7);
+
+	    }
+      }
+
+     ///////////////////////////////
+	 //I vertical
+   for(i=38 ; i<=104 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(255,i,7);
+
+	}
+      }
+
+	   //I horizontal
+   for(i=230 ; i<=280 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+
+	circle(i,37,7);
+
+	}
+      }
+
+
+
+	   //I horizontal2
+   for(i=230 ; i<=280 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(i,104,7);
+
+	}
+      }
+
+ ///////////////////////////
+	 //O vertical
+   for(i=38 ; i<=104 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(310,i,7);
+
+	}
+      }
+
+
+
+	   //O horizontal1
+   for(i=310 ; i<=345 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(i,104,7);
+
+	}
+      }
+
+	   //O horizontal2
+   for(i=310 ; i<=345 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(i,37,7);
+
+	}
+      }
+
+	 //O vertical
+   for(i=38 ; i<=104 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(345,i,7);
+
+	}
+      }
+
+///////////////////////////////
+	 //D vertical
+   for(i=38 ; i<=104 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(388,i,7);
+
+	}
+      }
+
+
+  //D horizontal2
+   for(i=375 ; i<=425 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(i,37,7);
+
+	}
+      }
+
+
+	 //D vertical
+   for(i=38 ; i<=104 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(425,i,7);
+
+	}
+      }
+
+
+
+  //D horizontal2
+   for(i=375 ; i<=425 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(i,104,7);
+
+	}
+      }
+//////////////////////////////////
+
+	 //I vertical
+   for(i=38 ; i<=104 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(480,i,7);
+
+
+	}
+      }
+      //I horizontal2
+   for(i=455 ; i<=505 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(i,37,7);
+
+	}
+      }     //I horizontal2
+   for(i=455 ; i<=505 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(i,104,7);
+
+	}
+/////////////////////////////////
+
+      }
+
+
+	 //C vertical
+   for(i=38 ; i<=104 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(535,i,7);
+
+	}
+
+	}
+
+	//C horizontal2
+   for(i=535 ; i<=585 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(i,37,7);
+
+	}
+      }
+	//C horizontal2
+   for(i=535 ; i<=585 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(i,104,7);
+
+	}
+      }
+
+setcolor(8);
+//////////////////////////////
+  //UNDERLINE PERIODIC
+
+   for(i=30 ; i<=600 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=50 ; j++)
+
+		 circle(i,130,4);
+
+	}
+      }
+
+////////////////////////////////////
+ /////////////table
+setcolor(1);
+  ////////////////
+	 //T vertical
+   for( i=160 ; i<225 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(135,i,7);
+
+	}
+
+	}
+
+
+	//T horizontal
+   for(i=110 ; i<=160 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(i,160,7);
+
+	}
+      }
+///////////////////////////////
+
+	 //A vertical
+   for( i=160 ; i<225 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(190,i,7);
+
+	}
+
+	}
+	 //A vertical
+   for( i=160 ; i<225 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(235,i,7);
+
+	}
+
+	}
+	//A horizontal1
+   for(i=190 ; i<=235 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(i,160,7);
+
+	}
+      }
+
+	//A horizontal2
+   for(i=190 ; i<=235 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(i,190,7);
+
+	}
+      }
+////////////////////////////////
+
+	 //B vertical
+   for( i=160 ; i<225 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(265,i,7);
+
+	}
+
+
+      }
+		 //B vertical
+   for( i=160 ; i<193 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(305,i,7);
+
+	}
+
+     }
+
+		 //B vertical
+   for( i=193 ; i<225 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(315,i,7);
+
+	}
+}
+	//B horizontal2
+   for(i=265 ; i<=305 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(i,160,7);
+
+	}
+      }
+
+
+	//B horizontal2
+   for(i=265 ; i<=315 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(i,193,7);
+
+	}
+      }
+
+
+	//B horizontal2
+   for(i=265 ; i<=315 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(i,225,7);
+
+	}
+      }
+//////////////////////////////////
+
+	//L horizontal2
+   for(i=345 ; i<=385 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(i,225,7);
+
+	}
+      }
+
+		 //L vertical
+   for( i=160 ; i<225 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(345,i,7);
+
+	}
+
+     }
+////////////////////////
+
+		 //E vertical
+   for( i=160 ; i<225 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(415,i,7);
+
+	}
+}
+
+
+	//E horizontal2
+   for(i=420 ; i<=450 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(i,160,7);
+
+	}
+      }
+
+	//E horizontal2
+   for(i=420 ; i<=450 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(i,193,7);
+
+	}
+      }
+
+	//E horizontal2
+   for(i=420 ; i<=450 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=100 ; j++)
+
+	 circle(i,225,7);
+
+	}
+      }
+/////////////////////////////////
+
+setcolor(8);
+	//UNDERLINE TABLE
+   for( i=110 ; i<=470 ; i++)
+      {
+
+	{
+	 for(int j=10 ; j<=50 ; j++)
+
+	 circle(i,245,4);
+
+	}
+      }
+
+ //////////////////////////////////
+
+ setcolor(12+BLINK);
+ settextstyle(3,0,5);
+outtextxy(65,300,"BY:");
+ delay(100);
+outtextxy(65,340,"ANKIT LUTHRA");
+ delay(100);
+outtextxy(65,380,"KAPIL RAHI");
+ getch();
+
+
+// PAGE 1: (INTRODUCTION )
+
+label1:        clrscr();
+		setcolor(6);
+	      settextstyle(3,0,5);
+	     outtextxy(30,10,"THE MODERN PERIODIC TABLE");
+	     setcolor(17);
+	     settextstyle(3,0,1);
+	     outtextxy(10,80,"Dmitrii Mendeleev 1834-1907, His chief contribution to chemistry");
+	     outtextxy(10,100,"was the establishment of the periodic system of elements, which");
+	     outtextxy(10,120,"was later modified and came to known as The Modern Periodic Table.");
+	     outtextxy(10,250,"\tGROUPS  :  18");
+	     outtextxy(10,300,"\tPERIODS :   7");
+	     outtextxy(10,400,"Press enter to continue");
+	     outtextxy(10,420,"Press Q to quit");
+	     outtextxy(10,440,"   enter ur choice : ");
+		ch=getch();
+
+
+			switch (ch)
+
+				{       case'\r': goto label2;
+
+					case'q': exit(0);
+
+					case'Q': exit(0);
+
+					default: clrscr();
+						 outtextxy(20,20," wrong choice");
+						 outtextxy(20,40," plz choose again");
+						 getch();
+						 goto label1;
+
+				}
+
+
+
+// END OF PAGE 1
+
+
+
+
+	// PAGE 2: IMPORTANT TERMS
+
+label2:        {
+		clrscr();
+		settextstyle(3,0,5);
+		setcolor(6);
+		outtextxy(130,8,"IMPORTANT TERMS ");
+		settextstyle(3,0,3);
+		setcolor(17);
+		outtextxy(50,45 ,"(necessary to understand the periodic table)");
+		settextstyle(3,0,3);
+		setcolor(6);
+		outtextxy(10,80," Group :");
+		settextstyle(3,0,1);
+		setcolor(1);
+		outtextxy(50,110,"These are the columns in the Periodic Table");
+		settextstyle(3,0,3);
+		setcolor(6);
+		outtextxy(10,140," Period:");
+		settextstyle(3,0,1);
+		setcolor(1);
+		outtextxy(50,170,"These are the rows in the Periodic table");
+		settextstyle(3,0,3);
+		setcolor(6);
+		outtextxy(10,200," Atomic No.:");
+		setcolor(1);
+		settextstyle(3,0,1);
+		outtextxy(50,230,"The no. of protons or the no. of electrons of an atom");
+		settextstyle(3,0,3);
+		setcolor(6);
+		outtextxy(10,260," Atomic Mass:");
+		settextstyle(3,0,1);
+		setcolor(1);
+		outtextxy(50,290,"The sum of no. of protons and the no. of nuetrons of an atom");
+		settextstyle(3,0,3);
+		setcolor(6);
+		outtextxy(10,320," S,P,D,F blocks description:");
+		settextstyle(3,0,1);
+		setcolor(1);
+		outtextxy(50,350,"These are the groups of elements represented in the table");
+	       //	setcolor(0);
+	     outtextxy(10,380,"Press enter to continue");
+	     outtextxy(10,400,"Press Q to quit");
+	     outtextxy(10,420,"Press Backspace to go back : ");
+	     outtextxy(10,440,"   enter ur choice : ");
+		ch=getch();
+
+
+
+		switch (ch)
+
+		    {	case'\r': goto label3;
+
+
+			case 'q':exit(0);
+
+
+			case 'Q':exit(0);
+
+			case '\b': goto label1;
+
+			default : clrscr();
+				  outtextxy(20,20," wrong choice");
+				  outtextxy(20,40," plz choose again");
+				  getch();
+				  goto label2;
+		    }
+
+		}
+
+// END OF PAGE PAGE 2
+
+
+
+
+	// PAGE 3: PICTORIAL REPRESENTATION
+
+	// S, P, & D block
+
+label3:     {   clrscr();
+		setcolor(1);
+		settextstyle(3,0,1);
+		outtextxy(40 ,10  , "1");  outtextxy(70 ,10 , "2");  outtextxy(100,10, "3");	      outtextxy(140,10, "4");    outtextxy(170,10, "5");	  outtextxy(200,10, "6");    outtextxy(232,10, "7");	   outtextxy(262,10, "8");   outtextxy(292,10, "9");	  outtextxy(322,10, "10");   outtextxy(362,10, "11");	outtextxy(395,10, "12");  outtextxy(425,10, "13");	  outtextxy(457,10, "14");   outtextxy(492,10, "15");    outtextxy(524,10, "16");	   outtextxy(556,10, "17");    outtextxy(586,10, "18");
+		setcolor(1);
+outtextxy(10 ,30  , "I");   setcolor(5);	       setcolor(14);	outtextxy(40 ,30  , "H");																																															   setcolor(10);	  outtextxy(590, 30 ,"He");    setcolor(1);
+outtextxy(10 ,70  , "II");  setcolor(5);       setcolor(11);	outtextxy(40 ,70  ,"Li");  outtextxy(70 ,70 , "Be"); setcolor(6);																																	      outtextxy(432,70  ,"B ");   setcolor(2);	outtextxy(463,70  ,"C ");  outtextxy(500,70  ,"N ");   outtextxy(530,70  ,"O ");   outtextxy(560,70  ,"F ");  setcolor(10); outtextxy(590, 70 ,"Ne");    setcolor(1);
+outtextxy(10 ,110 , "III"); setcolor(5);	       setcolor(11);	outtextxy(40 ,110 ,"Na");  outtextxy(70 ,110, "Mg");                                                                                                                                                                                                                                                                                                       outtextxy(432,110 ,"Al");setcolor(6);    outtextxy(463,110 ,"Si"); setcolor(2); outtextxy(500,110 ,"P ");   outtextxy(530,110 ,"S ");   outtextxy(560,110 ,"Cl"); setcolor(10);  outtextxy(590,110 ,"Ar");    setcolor(1);
+outtextxy(10 ,150 , "IV");  setcolor(5);	       setcolor(11);	outtextxy(40 ,150 ,"K");   outtextxy(70 ,150, "Ca");  setcolor(9);outtextxy(100,150, "Sc");       outtextxy(140 ,150, "Ti");    outtextxy(170 ,150, "V ");    outtextxy(200,150, "Cr");   outtextxy(230 ,150, "Mn");   outtextxy(260,150, "Fe");  outtextxy(290,150 ,"Co");   outtextxy(324 ,150  ,"Ni");     outtextxy(360,150,"Cu");     setcolor(3); outtextxy(400,150 ,"Zn");  outtextxy(432,150 ,"Ga");  setcolor(6);  outtextxy(463,150 ,"Ge");  outtextxy(500,150 ,"As");  setcolor(2); outtextxy(530,150 ,"Se"); setcolor(4);  outtextxy(560,150 ,"Br"); setcolor(10);  outtextxy(590,150 ,"Kr");    setcolor(1);
+outtextxy(10 ,190 , "V");   setcolor(5);	       setcolor(11);	outtextxy(40 ,190 ,"Rb");  outtextxy(70 ,190, "Sr");  setcolor(9);outtextxy(100,190, "Y ");       outtextxy(140 ,190, "Zr");    outtextxy(170 ,190, "Nb");    outtextxy(200,190, "Mo");   outtextxy(230 ,190, "Tc");   outtextxy(260,190, "Ru");  outtextxy(290,190 ,"Rh");   outtextxy(324 ,190  ,"Pd");     outtextxy(360,190 ,"Ag");    setcolor(3); outtextxy(400,190 ,"Cd");  outtextxy(432,190 ,"In");    outtextxy(463,190 ,"Sn"); setcolor(6); outtextxy(500,190 ,"Sb");   outtextxy(530,190 ,"Te");  setcolor(2); outtextxy(560,190 ,"I "); setcolor(10);  outtextxy(590,190 ,"Xe");    setcolor(1);
+outtextxy(10 ,230 , "VI");  setcolor(5);	       setcolor(11);	outtextxy(40 ,230 ,"Cs");  outtextxy(70 ,230, "Ba");  setcolor(9);outtextxy(100,230, "Lan");      outtextxy(140 ,230, "Hf");    outtextxy(170 ,230, "Ta");    outtextxy(200,230, "W ");   outtextxy(230 ,230, "Re");   outtextxy(260,230, "Os");  outtextxy(290,230 ,"Ir");   outtextxy(324 ,230  ,"Pt");     outtextxy(360,230 ,"Au");    setcolor(4); outtextxy(400,230 ,"Hg"); setcolor(3); outtextxy(432,230 ,"Tl");    outtextxy(463,230 ,"Pb");  outtextxy(500,230 ,"Bi"); setcolor(6);  outtextxy(530,230 ,"Po"); setcolor(2);  outtextxy(560,230 ,"At"); setcolor(10);  outtextxy(590,230 ,"Rn");      setcolor(1);
+outtextxy(10 ,270 , "VII"); setcolor(5);	       setcolor(11);	outtextxy(40 ,270 ,"Fr");  outtextxy(70 ,270, "Ra");  setcolor(9);outtextxy(100,270, "Act");      outtextxy(140 ,270, "Rf");    outtextxy(170 ,270, "Db");    outtextxy(200,270, "Sg");   outtextxy(230 ,270, "Bh");   outtextxy(260,270, "Hs");  outtextxy(290,270 ,"Mt");   outtextxy(320 ,270  ,"Uun");    outtextxy(360,270 ,"Uuu");   setcolor(3); outtextxy(400,270 ,"Uub");                              outtextxy(463,270 ,"Uuq");                                                                                                                    setcolor(1);
+							   settextstyle(7,0,1);	  setcolor(0);	outtextxy(40 ,50 ,"S Block"); outtextxy(200 ,120 ,"P Block");outtextxy(500 ,40 ,"D Block");outtextxy(40 ,300 ,"F Block"); settextstyle(3,0,1);
+
+									setcolor(1);	  outtextxy(30,320, "Lanthanoids:");   setcolor(12);		      outtextxy(140,320, "La");		   outtextxy(170,320, "Ce");    outtextxy(200,320, "Pr");  outtextxy(230,320, "Nd");   outtextxy(260,320, "Pm"); outtextxy(290,320, "Sm");outtextxy(320,320, "Eu");  outtextxy(360,320, "Gd");      outtextxy(400,320, "Tb");    outtextxy(432,320, "Dy"); outtextxy(463,320, "Ho");   outtextxy(500,320, "Er");  outtextxy(530,320, "Tm");  outtextxy(560,320, "Yb"); outtextxy(590,320, "Lu");  setcolor(1);
+										  outtextxy(30,360, "Actinoids:");     setcolor(5);		      outtextxy(140,360, "Ac");		   outtextxy(170,360, "Th");    outtextxy(200,360, "Pa");  outtextxy(230,360, "U");   outtextxy(260,360, "Np"); outtextxy(290,360, "Pu");outtextxy(320,360, "Am");  outtextxy(360,360, "Cm");      outtextxy(400,360, "Bk");    outtextxy(432,360, "Cf"); outtextxy(463,360, "Es");   outtextxy(500,360, "Fm");  outtextxy(530,360, "Md");  outtextxy(560,360, "No"); outtextxy(590,360, "Lr");   setcolor(1);
+
+		// F-Block
+
+
+	     setcolor(12);
+	     outtextxy(10,380,"Press enter to continue");
+	     outtextxy(10,400,"Press Q to quit");
+	     outtextxy(10,420,"Press Backspace to go back : ");
+	     outtextxy(10,440,"   enter ur choice : ");
+		ch=getch();
+
+
+			switch (ch)
+
+			{	case'\r': goto label4;
+
+
+				case 'q': exit(0);
+
+				case 'Q': exit(0);
+
+				case '\b': goto label2;
+
+
+			default:  clrscr();
+				  outtextxy(20,20,"wrong choice");
+				  outtextxy(20,40,"plz choose again");
+				  getch();
+				  goto label3;
+		    }
+
+
+	      }
+
+
+// END OF PAGE 3
+
+
+
+	// PAGE 4: MAIN MENU (START OF CODING:BASED ON SWITCH STATEMENT)
+
+label4:	    {   setcolor(12);
+		clrscr();
+		settextstyle(2,0,9);
+		setcolor(6);
+		outtextxy(10,8," SEARCH THE ENTIRE PERIODIC TABLE ");
+		settextstyle(2,0,6);
+		setcolor(1);
+		outtextxy(150,40,"(CHOOSE ANY ONE SEARCH OPTION)");
+
+		settextstyle(11,0,3);
+		setcolor(1);
+		outtextxy(20,100,"(a) Enter a specific group");
+
+		outtextxy(20,130,"(b) Enter a specific period");
+
+		outtextxy(20,160,"(c) Enter a specific physical state");
+
+	       //	outtextxy(20,190,"(d) Enter a specific atomic number");
+
+	       //	outtextxy(20,220,"(e) Enter a specific atomic mass");
+
+	       //	outtextxy(20,250,"(f) Enter a specific block");
+
+		outtextxy(20,280,"(g) View full pictorial view");
+
+		//outtextxy(20,310,"h) Detail of all the elements");
+
+		outtextxy(20,390," Q to quit");
+
+
+
+		outtextxy(20,420,"* Enter your choice to continue ");
+
+		ch=getch();
+		//cin>>ch;
+
+
+// END OF PAGE 4
+
+
+	// SWITCH STATEMENT FOR PAGE 4 MENU
+
+	switch(ch)
+
+
+		{
+
+	label5:	case 'a':
+
+		clrscr();
+
+		outtextxy(20,20,"(a) Enter the group number");
+		outtextxy(20,50,"Note  group nos. only integers from 1-18");
+
+		cout<<"\r\r\r\r";	cin>>group;
+				clrscr();
+			switch(group)
+
+
+			{case 1:settextstyle(3,0,5);
+				outtextxy(200,10,"GROUP 1");
+				settextstyle(11,0,3);
+				outtextxy(10,80,"Sr No. Symbol     Name      Atomic no.    Atomic mass    Physical State");
+				outtextxy(10,100," 1.      H      Hydrogen      1            1.0079          Gas  ");
+				outtextxy(10,120,"* alkali metals *");
+				outtextxy(10,140," 2.      Li     Lithium       3            6.941           Solid");
+				outtextxy(10,160," 3.      Na     Sodium        11           22.990          Solid");
+				outtextxy(10,180," 4.      K      Potassium     19           39.098          Solid");
+				outtextxy(10,200," 5.      Rb     Rubidium      37           85.468          Solid");
+				outtextxy(10,220," 6.      Cs     Caesium       55           132.91          Solid");
+				outtextxy(10,240," 7.      Fr     Strontium     87           223             Solid");
+				  getch();
+				  goto label4;
+
+
+			case 2: settextstyle(3,0,5);
+				outtextxy(200,10,"GROUP 2");
+				settextstyle(11,0,3);
+				outtextxy(10,80,"Sr No. Symbol     Name      Atomic no.    Atomic mass    Physical State");
+				outtextxy(10,100,"* alkaline earth metals *");
+				outtextxy(10,120," 1.      Be     Beryllium      4           9.0122          Solid");
+				outtextxy(10,140," 2.      Mg     Magnesium      12          24.305          Solid");
+				outtextxy(10,160," 3.      Ca     Calcium        20          40.078          Solid");
+				outtextxy(10,180," 4.      Sr     Strontium      38          87.62           Solid");
+				outtextxy(10,200," 5.      Ba     Barium         56          137.33          Solid");
+				outtextxy(10,220," 6.      Ra     Radium         88          88              Solid");
+				 getch();
+				  goto label4;
+
+			case 3: settextstyle(3,0,5);
+				outtextxy(200,10,"GROUP 3");
+				settextstyle(11,0,3);
+				outtextxy(10,80, "Sr No. Symbol     Name      Atomic no.    Atomic mass    Physical State");
+				outtextxy(10,100, "* Transition metals *");
+				outtextxy(10,120, " 1.    Sc       Scandium       21          44.956             Solid");
+				outtextxy(10,140," 2.    Y        Yttrium        39          88.906             Solid");
+				outtextxy(10,160,"* Lanthanide *");
+				outtextxy(10,180," 3.    La-Lu    Lanthanoids    57-71       138-175       Solid or Synthetic");
+				outtextxy(10,200,"* Acctinide *");
+				outtextxy(10,220," 4.    Ac-Lr    Actinoids      89-103      227-262       Solid or Synthetic");
+				  getch();
+				  goto label4;
+
+
+			case 4:settextstyle(3,0,5);
+			outtextxy(200,10,"GROUP 4");
+			settextstyle(11,0,3);
+			outtextxy(10,80,"SrNo.  Symbol    Name      Atomic no.  Atomic mass  Physical State");
+			outtextxy(10,100," 1.     Ti     Titanium       22        47.867    Solid : Tranisition");
+			outtextxy(10,120," 2.     Zr     Zirconium      40        91.224    Solid : Tranisition metal");
+			outtextxy(10,140," 3.     Hf     Hafnium        72        178.49    Solid : Tranisition metal");
+			outtextxy(10,160," 4.     Rf     Rutherfordium  104       261       Synthetic: Transition metal");
+				 getch();
+				 goto label4;
+
+			case 5:settextstyle(3,0,5);
+			outtextxy(200,10,"GROUP 5");
+			settextstyle(11,0,3);
+			outtextxy(10,80,"SrNo. Symbol    Name    Atomic no. Atomic mass    Physical State");
+			outtextxy(10,100," 1.     V      Vanadium    23         50.942   Solid : Tranisition metal");
+			outtextxy(10,120," 2.     Nb     Niobium     41         92.906   Solid : Tranisition metal");
+			outtextxy(10,140," 3.     Ta     Tantalum    73         180.95   Solid : Tranisition metal");
+			outtextxy(10,160," 4.     Db     Dubnium     202        262      Synthetic : Tranisition Metal");
+				 getch();
+				 goto label4;
+
+			case 6:settextstyle(3,0,5);
+			outtextxy(200,10,"GROUP 6");
+			settextstyle(11,0,3);
+			outtextxy(10,80, "Sr No.  Symbol     Name   Atomic no.  Atomic mass    Physical State");
+			outtextxy(10,100, " 1.       Cr    Chromium     24        51.996     Solid : Tranisition metal");
+			outtextxy(10,120, " 2.       Mo    Molybdenum   42        95.94      Solid : Tranisition metal");
+			outtextxy(10,140, " 3.       W     Tungsten     74        183.84     Solid : Tranisition metal");
+			outtextxy(10,160, " 4.       Sg    Seaborgium   106       266        Synthetic: Tranisition metal");
+				 getch();
+				 goto label4;
+
+			case 7:settextstyle(3,0,5);
+			outtextxy(200,10,"GROUP 7");
+			settextstyle(11,0,3);
+			outtextxy(10,80,"Sr No.  Symbol     Name   Atomic no.  Atomic mass    Physical State");
+			outtextxy(10,100," 1.       Mn    Manganese   25        54.938     Solid : Tranisition metal");
+			outtextxy(10,120," 2.       Tc    Technetium  43        96         Solid : Tranisition metal");
+			outtextxy(10,140," 3.       Re    Rhenium     75        186.21     Solid : Tranisition metal");
+			outtextxy(10,160," 4.       Bh    Bohrium     107       264        Synthetic: Transition metal");
+				 getch();
+				 goto label4;
+
+
+			case 8:settextstyle(3,0,5);
+			outtextxy(200,10,"GROUP 8");
+			settextstyle(11,0,3);
+			outtextxy(10,80, "Sr No.  Symbol   Name    Atomic no. Atomic mass    Physical State");
+			outtextxy(10,100," 1.      Fe      Iron        26      55.845    Solid : Tranisition metal");
+			outtextxy(10,120," 2.      Ru      Ruthenium   44      101.07    Solid : Tranisition metal");
+			outtextxy(10,140," 3.      Os      Osmium      76      190.23    Solid : Tranisition metal");
+			outtextxy(10,160," 4.      Hs      Hassium     108     277       Synthetic : Tranisition metal");
+				 getch();
+				 goto label4;
+
+			case 9:settextstyle(3,0,5);
+			outtextxy(200,10,"GROUP 9");
+			settextstyle(11,0,3);
+			outtextxy(10,80, "Sr No.  Symbol   Name    Atomic no. Atomic mass    Physical State");
+			outtextxy(10,100, " 1.      Co      Cobalt     27       58.933    Solid : Tranisition metal");
+			outtextxy(10,120, " 2.      Rh      Rhodium    45       106.42    Solid : Tranisition metal");
+			outtextxy(10,140 ," 3.      Ir      Iridium    77       195.08    Solid : Tranisition metal");
+			outtextxy(10,160, " 4.      Mt      Meiternium 109      261       Synthetic : Tranisition metal");
+				 getch();
+				 goto label4;
+
+			case 10:settextstyle(3,0,5);
+			outtextxy(200,10,"GROUP 10");
+			settextstyle(11,0,3);
+			outtextxy(10,80, "Sr.No. Symbol    Name     Atomic no.  Atomic mass    Physical State");
+			outtextxy(10,100, " 1.    Ni      Nickel       28        58.693     Solid : Transition metal");
+			outtextxy(10,120, " 2.    Pd      Paladium     46        106.42     Solid : Transition metal");
+			outtextxy(10,140, " 3.    Pt      Platinum     78        195.08     Solid : Transition metal");
+			outtextxy(10,160, " 4.    Uun     Ununnilbium  110       281        Synthetic : Transition metal");
+			getch();
+				 goto label4;
+
+			case 11:settextstyle(3,0,5);
+			outtextxy(200,10,"GROUP 11");
+			settextstyle(11,0,3);
+			outtextxy(10,80, "Sr.No. Symbol   Name    Atomic no. Atomic mass    Physical State");
+			outtextxy(10,100, " 1.     Cu    Copper      29        63.546      Solid : Transition metal");
+			outtextxy(10,120, " 2.     Ag    Silver      47        107.87      Solid : Transition metal");
+			outtextxy(10,140, " 3.     Au    Gold        79        196.97      Solid : Transition metal");
+			outtextxy(10,160, " 4.     Uub   Unununium   111       272         Synthetic : Transition metal");
+				 getch();
+				  goto label4;
+
+			case 12:settextstyle(3,0,5);
+			outtextxy(200,10,"GROUP 12");
+			settextstyle(11,0,3);
+			outtextxy(10,80,"Sr.No.  Symbol   Name      Atomic no.  Atomic mass    Physical State");
+			outtextxy(10,100," 1.      Zn     zinc         30          65.39       Solid :  metal");
+			outtextxy(10,120," 2.      Cd     cadmium      48          112.41      Solid :  metal");
+			outtextxy(10,140," 3.      Hg     mercury      80          200.59      Liquid : metal");
+			outtextxy(10,160," 4.      Uub    ununbium     112         285         Synthetic :  metal");
+				getch();
+				goto label4;
+
+			case 13:settextstyle(3,0,5);
+			outtextxy(200,10,"GROUP 13");
+			settextstyle(11,0,3);
+			outtextxy(10,80, "Sr.No. Symbol     Name    Atomic no.  Atomic mass    Physical State");
+			outtextxy(10,100, " 1.     B        boron       5          10.811     Solid :  semimetal");
+			outtextxy(10,120, " 2.     Al       aluminium   13         26.982     Solid :  metal");
+			outtextxy(10,140, " 3.     Ga       gallium     31         69.723     Solid :  metal");
+			outtextxy(10,160, " 4.     In       indium      49         114.82     Solid :  metal");
+			outtextxy(10,180, " 5.     Tl       thallium    81         204.36     Solid :  metal");
+				 getch();
+				 goto label4;
+
+			case 14:settextstyle(3,0,5);
+			outtextxy(200,10,"GROUP 14");
+			settextstyle(11,0,3);
+			outtextxy(10,80,"Sr.No.  Symbol    Name    Atomic no.  Atomic mass    Physical State");
+			outtextxy(10,100," 1.      C      carbon       6        12.011     Solid :  nonmetal");
+			outtextxy(10,120," 2.      Si     silicon      14       28.086     Solid :  metal");
+			outtextxy(10,140," 3.      Ge     germanium    32       72.64      Solid :  semimetal");
+			outtextxy(10,160," 4.      Sn     tin          50       118.71     Solid :  metal");
+			outtextxy(10,180," 5.      Pb     lead         82       207.2      Solid :  metal");
+			outtextxy(10,200," 6.      Uuq    ununquadium  114      289        Synthetic :  metal");
+				 getch();
+				 goto label4;
+
+			case 15:settextstyle(3,0,5);
+			outtextxy(200,10,"GROUP 15");
+			settextstyle(11,0,3);
+			outtextxy(10,80,"Sr.No. Symbol    Name    Atomic no. Atomic mass    Physical State");
+			outtextxy(10,100," 1.     N     nitrogen     7         14.007      Solid : nonmetal");
+			outtextxy(10,120," 2.     P     phosphorus   15        30.974      Solid : nonmetal");
+			outtextxy(10,140," 3.     As    arsenic      33        74.922      Solid : metal");
+			outtextxy(10,160," 4.     Sb    antimony     51        121.76      Solid : metal");
+			outtextxy(10,180," 5.     Bi    bismuth	     83        208.98      Solid : nonmetal");
+				 getch();
+				 goto label4;
+
+
+			case 16:settextstyle(3,0,5);
+			outtextxy(200,10,"GROUP 16");
+			settextstyle(11,0,3);
+			outtextxy(10,80,"Sr.No  Symbol   Name  Atomic no.Atomic mass    Physical State");
+			outtextxy(10,100," 1.     O     Oxygen     8       15.999       Gas:   Nonmetal : Halogen");
+			outtextxy(10,120," 2.     S     Sulphur    16      32.065       Solid: Nonmetal : Halogen");
+			outtextxy(10,140," 3.     Se    Selenium   34      78.96        Solid: Nonmetal : Halogen");
+			outtextxy(10,160," 4.     Te    Tellurium  52      127.60       Solid: Semimetal: Halogen");
+			outtextxy(10,280," 5.     Po    Polonium   84      209          Solid: Semimetal: Halogen");
+				  getch();
+				  goto label4;
+
+
+			case 17:settextstyle(3,0,5);
+			outtextxy(200,10,"GROUP 17");
+			settextstyle(11,0,3);
+			outtextxy(10,80, "Sr.No  Symbol  Name  Atomic no. Atomic mass    Physical State");
+			outtextxy(10,100," 1.     F    Fluorine    9       18.998    Gas Nonmetal Halogen");
+			outtextxy(10,120," 2.     Cl   Chlorine    17      35.453    Gas Nonmetal Halogen");
+			outtextxy(10,140," 3.     Br   Bromine     35      79.904    Gas Nonmetal Halogen");
+			outtextxy(10,160," 4.     I    Iodine      53      126.90    Gas Nonmetal Halogen");
+			outtextxy(10,180," 5.     At   Astatine    85      210       Gas Nonmetal Halogen");
+				  getch();
+				  goto label4;
+
+
+			case 18:settextstyle(3,0,5);
+			outtextxy(200,10,"GROUP 18");
+			settextstyle(11,0,3);
+			outtextxy(10,80, "Sr.No  Symbol   Name   Atomic no. Atomic mass    Physical State");
+			outtextxy(10,100," 1.     He     Helium     2        4.0026         Noble gas");
+			outtextxy(10,120," 2.     Ne     Neon       10       20.180         Noble gas");
+			outtextxy(10,140," 3.     Ar     Argon      18       39.948         Noble gas");
+			outtextxy(10,160," 4.     Kr     Krypton    36       83.80          Noble gas");
+			outtextxy(10,180," 5.     Xe     Xenon      54       131.29         Noble gas");
+			outtextxy(10,200," 6.     Rn     Radon      86       222            Noble gas");
+				  getch();
+				  goto label4;
+
+			default : clrscr();
+				  outtextxy(20,20,"wrong choice");
+				  outtextxy(20,40,"plz choose again");
+				  getch();
+				  goto label5;
+
+
+		 }
+
+
+
+
+label6:		case 'b': { clrscr();
+				outtextxy(20,20,"(a) Enter the period number");
+				outtextxy(20,40,"Note  period nos. only integers from 1-7");
+
+		   cin>>period;
+		   clrscr();
+
+		   switch (period)
+			  {
+
+			    case '1':
+			   settextstyle(3,0,5);
+			   outtextxy(200,10,"PERIOD 1");
+			   settextstyle(11,0,3);
+			   outtextxy(10,80, " Sr No. Symbol  Name    Atomic no. Atomic mass  Physical State");
+			   outtextxy(10,100," 1.      H     Hydrogen    1    	  1.0079        Gas");
+			   outtextxy(10,120," 2.      He    Helium      2    	  4.0026        Noble Gas");
+				   getch();
+				   goto label4;
+
+			   case '2':settextstyle(3,0,5);
+			   outtextxy(200,10,"PERIOD 2");
+			   settextstyle(11,0,3);
+			   outtextxy(10,80, "SrNo. Symbol   Name   Atomic no. Atomic mass    Physical State");
+			   outtextxy(10,100," 1.    Li    Lithium     3         6.941        Solid    : Alkali metal");
+			   outtextxy(10,120," 2.    Be    Berillium   4         9.0122       Solid    : Alkaline earth metal");
+			   outtextxy(10,140," 3.    B     Boron       5         10.811       Solid    : Semimetal");
+			   outtextxy(10,160," 4.    C     Carbon      6         12.011       Solid    : Non metal");
+			   outtextxy(10,180," 5.    N     Nitrogen    7         14.007       Gas      : Non metal");
+			   outtextxy(10,200," 6.    O     Oxygen      8         15.999       Gas      : Non metal :Chalcogen");
+			   outtextxy(10,220," 7.    F     Fluorine    9         18.998       Gas      : Non metal :Halogen");
+			   outtextxy(10,240," 8.    Ne    Neon        10        20.180       NobleGas : Non metal");
+				  getch();
+				  goto label4;
+
+			   case '3':settextstyle(3,0,5);
+			   outtextxy(200,10,"PERIOD 3");
+			    settextstyle(11,0,3);
+			   outtextxy(10,80, "SrNo. Symbol   Name   Atomic no.  Atomic mass    Physical State");
+			   outtextxy(10,100, " 1. 	Na   Sodium      11    	  22.990       Solid  :Alkali Metal");
+			   outtextxy(10,120, " 2. 	Mg   Magnesium   12    	  24.305       Solid  :Alkaline Earth metal");
+			   outtextxy(10,140, " 3. 	Al   Aluminium   13    	  26.982       Solid  :Metal");
+			   outtextxy(10,160, " 4. 	Si   Silicon     14    	  28.095       Solid  :Semimetal");
+			   outtextxy(10,180, " 5. 	P    Phosphorus  15    	  30.974       Solid  :Non metal");
+			   outtextxy(10,200, " 6. 	S    Sulphur     16    	  32.065       Solid  :Non metal");
+			   outtextxy(10,220, " 7. 	Cl   Chlorine    17    	  35.453       Gas    :Halogen");
+			   outtextxy(10,240, " 8. 	Ar   Argon       18    	  39.948       Gas    :Noble gas");
+					  getch();
+				   goto label4;
+
+			   case '4':settextstyle(3,0,5);
+			   outtextxy(200,10,"PERIOD 4");
+			   settextstyle(11,0,3);
+			   outtextxy(10,80, "Sr No. Symbol    Name   Atomic no.  Atomic mass    Physical State");
+			   outtextxy(10,100, " 1. 	K      Potassium   19        39.098       Solid : Alkali metal");
+			   outtextxy(10,120, " 2. 	Ca     Calcium     20        40.078       Solid : Alkaline earth metal");
+			   outtextxy(10,140, " 3. 	Sc     Scandium    21        44.956       Solid : Transition metal");
+			   outtextxy(10,160, " 4. 	Ti     Titanium    22	     47.867       Solid : Transition metal");
+			   outtextxy(10,180, " 5. 	V      Vanadium    23        50.942       Solid : Transition metal");
+			   outtextxy(10,200, " 6. 	Cr     Chromine    24        51.996       Solid : Transition metal");
+			   outtextxy(10,220, " 7. 	Mn     Manganese   25        54.938       Solid : Transition metal");
+			   outtextxy(10,240, " 8. 	Fe     Iron        26 	     55.845       Solid : Transition metal");
+			   outtextxy(10,260, " 9. 	Co     Cobalt      27        58.933       Solid : Transition metal");
+			   outtextxy(10,280, " 10. 	Ni     Nickel      28        58.693       Solid : Transition metal");
+			   outtextxy(10,300, " 11. 	Cu     Copper      29        63.546       Solid : Transition metal");
+			   outtextxy(10,320, " 12. 	Zn     Zinc        30 	     65.39        Solid : Metal");
+			   outtextxy(10,340, " 13. 	Ga     Galium      31        69.723       Solid : Metal");
+			   outtextxy(10,360, " 14. 	Ge     Germanium   32        72.642       Solid : Semimetal");
+			   outtextxy(10,380, " 15. 	As     Arsenic     33        74.922       Solid : Semimetal");
+			   outtextxy(10,400, " 16. 	Se     Selenium    34        78.96        Solid : Chalcogen metal");
+			   outtextxy(10,420, " 17. 	Br     Bromine     35        79.904       Liquid: Halogen Element");
+			   outtextxy(10,440, " 18. 	Kr     Krypton     36        83.80        Gas   : Noble gas");
+
+				   getch();
+				   goto label4;
+
+
+			   case '5':settextstyle(3,0,5);
+			   outtextxy(200,10,"PERIOD 5");
+			   settextstyle(11,0,3);
+			   outtextxy(10,80,  "SrNo. Symbol   Name   Atomic no. Atomic mass  Physical State");
+			   outtextxy(10,100, " 1.    Rb    Rubidium    37        85.468         Gas  ");
+			   outtextxy(10,120, " 2.    Sr    Strontium   38        87.62          Gas  ");
+			   outtextxy(10,140, " 3.    Y     Yttrium     39        88.906      Solid : Transition metal");
+			   outtextxy(10,160, " 4.    Zr    Zirconium   40        91.224      Solid : Transition metal");
+			   outtextxy(10,180, " 5.    Nb    Niboium     41        92.906      Solid : Transition metal");
+			   outtextxy(10,200, " 6.    Mo    Molybdenum  42        95.94       Solid : Transition metal");
+			   outtextxy(10,220, " 7.    Tc    Technitium  43        96          Solid : Transition metal");
+			   outtextxy(10,240, " 8.    Ru    Ruthenium   44        101.07      Solid : Transition metal");
+			   outtextxy(10,260, " 9.    Rh    Rhodium     45        102.91      Solid : Transition metal");
+			   outtextxy(10,280, " 10.   Pd    Paladium    46        106.42      Solid : Transition metal");
+			   outtextxy(10,300, " 11.   Ag    Silver      47        107.87      Solid : Transition metal");
+			   outtextxy(10,320, " 12.   Cd    Cadmium     48        112.41      Solid : Metal");
+			   outtextxy(10,340, " 13.   In    Indium      49        114.82      Solid : Metal");
+			   outtextxy(10,360, " 14.   Sn    Tin         50        118.71      Solid : Metal");
+			   outtextxy(10,380, " 15.   Sb    Antimony    51        121.76      Solid : Semimetal");
+			   outtextxy(10,400, " 16.   Te    Telenium    52        127.60      Solid : Semimetal");
+			   outtextxy(10,420, " 17.   I     Iodine      53        126.90      Solid : Halogen element");
+			   outtextxy(10,440, " 18.   Xe    Xenon       54        131.29      Gas   : Noble gas");
+			      getch();
+				   goto label4;
+
+			   case '6':settextstyle(3,0,5);
+			   outtextxy(200,10,"PERIOD 6");
+			   settextstyle(11,0,3);
+			   outtextxy(10,80,  "Sr. Symbol   Name     Atomic no.  Atomic mass     Physical State");
+			   outtextxy(10,100, " 1.  Cs     Caesium      55        132.91      Solid : Alkali metal");
+			   outtextxy(10,120, " 2.  Ba     Barium       56        137.33      Solid : Alkaline Earth metal");
+			   outtextxy(10,140, " 3.  La-Lu  Lanthanoids  57-71     138-175     Solid or Synthetic");
+			   outtextxy(10,160, " 4.  Hf     Hafnium      72        178.49      Solid : Transition metal");
+			   outtextxy(10,180, " 5.  Ta     Tantalium    73        180.95      Solid : Transition metal");
+			   outtextxy(10,200, " 6.  W      Tungsten     74        183.84      Solid : Transition metal");
+			   outtextxy(10,220, " 7.  Re     Rhenium      75        186.21      Solid : Transition metal");
+			   outtextxy(10,240, " 8.  Os     Osmium       76        190.23      Solid : Transition metal");
+			   outtextxy(10,260, " 9.  Ir     Iridium      77        192.22      Solid : Transition metal");
+			   outtextxy(10,280, " 10. Pt     Platinum     78        195.08      Solid : Transition metal");
+			   outtextxy(10,300, " 11. Au     Gold         79        196.97      Solid : Transition metal");
+			   outtextxy(10,320, " 12. Hg     Mercury      80        200.59      Liquid: Metal");
+			   outtextxy(10,340, " 13. Tl     Thallium     81        204.38      Solid : Metal");
+			   outtextxy(10,360, " 14. Pb     Lead         82        207.2       Solid : Metal");
+			   outtextxy(10,380, " 15. Bi     Bismuth      83        208.96      Solid : Metal");
+			   outtextxy(10,400, " 16. Po     Polonium     84        209         Solid : Semimetal");
+			   outtextxy(10,420, " 17. At     Astatine     85        210         Solid : Halogen element");
+			   outtextxy(10,440, " 18. Rn     Radon        86        222         Gas   : Noble gas");
+			     getch();
+				   goto label4;
+
+
+			   case '7':settextstyle(3,0,5);
+			   outtextxy(200,10,"PERIOD 7");
+			   settextstyle(11,0,3);
+			   outtextxy(10,80,  "Sr No. Symbol   Name    Atomic no. Atomic mass    Physical State");
+			   outtextxy(10,100, " 1.      Fr   Francium      87       223       Solid : Alkali metal");
+			   outtextxy(10,120, " 2.      Ra   Radium        88       226       Solid : Alkaline earth metal");
+			   outtextxy(10,140, " 3.     Ac-Lr Actinoids     89-103   227-262   Solid or Synthetic");
+			   outtextxy(10,160, " 4.      Rf   Rutherfordium 104      261       Synthetic : Transition metal");
+			   outtextxy(10,180, " 5.      Db   Dubnium       105      262       Synthetic : Transition metal");
+			   outtextxy(10,200, " 6.      Sg   Seaborgium    106      266       Synthetic : Transition metal");
+			   outtextxy(10,220, " 7.      Bh   Bohrium       107      264       Synthetic : Transition metal");
+			   outtextxy(10,240, " 8.      Hs   Hassium       108      277       Synthetic : Transition metal");
+			   outtextxy(10,260, " 9.      Mt   Meitnerium    109      268       Synthetic : Transition metal");
+			   outtextxy(10,280, " 10.     Uun  Ununnilium    110      281       Synthetic : Transition metal");
+			   outtextxy(10,300, " 11.     Uuu  Unununium     111      272       Synthetic : Transition metal");
+			   outtextxy(10,320, " 12.     Uub  Ununbium      112      285       Synthetic : Metal");
+			   outtextxy(10,340, " 13.     Uuq  Ununquadium   114      289       Synthetic : Metal");
+
+				   getch();
+				   goto label4;
+
+			   default:setcolor(12);
+				clrscr();
+				outtextxy(20,20,"wrong choice");
+				outtextxy(20,40,"plz choose again");
+				   getch();
+				   goto label6;
+				  }
+
+
+
+
+ label7:			case 'c': clrscr();
+				outtextxy(200,20,"Enter the state");
+				 outtextxy(20,80, "(a) Solids");
+				 outtextxy(20,100,"(b) Liquids");
+				 outtextxy(20,120,"(c) Gases");
+				 outtextxy(20,140,"(d) Synthetics");
+				 state=getch();
+
+				 switch(state)
+				 {case 'a':     label8:
+						clrscr();
+					 settextstyle(3,0,5);
+					 outtextxy(200,10,"SOLIDS");
+					 settextstyle(11,0,3);
+					 outtextxy(10,80,"Following elements are Solids");
+					 outtextxy(10,100,"SrNo. Symbol   Name    Atomic no. Atomic mass    Physical State");
+					 outtextxy(10,120," 1.    Li    Lithium     3         6.941        Solid    : Alkali metal");
+					 outtextxy(10,140," 2.    Be    Berillium   4         9.0122       Solid    : Alkaline earth metal");
+					 outtextxy(10,160," 3.    B     Boron       5         10.811       Solid    : Semimetal");
+					 outtextxy(10,180," 4.    C     Carbon      6         12.011       Solid    : Non metal");
+					 outtextxy(10,200," 5.    Na    Sodium      11        22.990       Solid  :Alkali Metal");
+					 outtextxy(10,220," 6.    Mg    Magnesium   12        24.305       Solid  :Alkaline Earth metal");
+					 outtextxy(10,240," 7.    Al    Aluminium   13        26.982       Solid  :Metal");
+					 outtextxy(10,260," 8.    Si    Silicon     14        28.095       Solid  :Semimetal");
+					 outtextxy(10,280," 9.    P     Phosphorus  15        30.974       Solid  :Non metal");
+					 outtextxy(10,300," 10.   S     Sulphur     16        32.065       Solid  :Non metal");
+					 outtextxy(10,320," 11.   K     Potassium   19        39.098       Solid : Alkali metal");
+					 outtextxy(10,340," 12.   Ca    Calcium     20        40.078       Solid : Alkaline earth metal");
+					 outtextxy(10,360," 13.   Sc    Scandium    21        44.956       Solid : Transition metal");
+					 outtextxy(10,380," 14.   Ti    Titanium    22        47.867       Solid : Transition metal");
+					 outtextxy(10,400," 15.   V     Vanadium    23        50.942       Solid : Transition metal");
+					 outtextxy(10,420," 16.   Cr    Chromine    24        51.996       Solid : Transition metal");
+					 outtextxy(10,440," 17.   Mn    Manganese   25        54.938       Solid : Transition metal");
+					 outtextxy(10,460," Press enter to proceed                      Backspace to go back");
+
+					 ch=getch();
+
+
+			switch (ch)
+
+			{	case'\r': goto label9;
+
+
+				//case 'q': exit(0);
+
+				//case 'Q': exit(0);
+
+				case '\b': goto label4;
+
+
+			default: setcolor(12);
+				clrscr();
+				  outtextxy(20,20,"wrong choice");
+				  outtextxy(20,40,"plz choose again");
+				  getch();
+				  goto label8;
+		    }
+
+	label9:
+					 clrscr();
+					 settextstyle(3,0,5);
+					 outtextxy(200,10,"SOLIDS");
+					 settextstyle(11,0,3);
+
+					 outtextxy(10,80,"SrNo. Symbol   Name    Atomic no. Atomic mass    Physical State");
+					 outtextxy(10,100," 18.   Fe    Iron        26        55.845       Solid : Transition metal");
+					 outtextxy(10,120," 19.   Co    Cobalt      27        58.933       Solid : Transition metal");
+					 outtextxy(10,140," 20.   Ni    Nickel      28        58.693       Solid : Transition metal");
+					 outtextxy(10,160," 21.   Cu    Copper      29        63.546       Solid : Transition metal");
+					 outtextxy(10,180," 22.   Zn    Zinc        30        65.39        Solid : Metal");
+					 outtextxy(10,200," 23.   Ga    Galium      31        69.723       Solid : Metal");
+					 outtextxy(10,220," 24.   Ge    Germanium   32        72.642       Solid : Semimetal");
+					 outtextxy(10,240," 25.   As    Arsenic     33        74.922       Solid : Semimetal");
+					 outtextxy(10,260," 26.   Se    Selenium    34        78.96        Solid : Chalcogen metal");
+					 outtextxy(10,280," 27.   Y     Yttrium     39        88.906       Solid : Transition metal");
+					 outtextxy(10,300," 28.   Zr    Zirconium   40        91.224       Solid : Transition metal");
+					 outtextxy(10,320," 29.   Nb    Niboium     41        92.906       Solid : Transition metal");
+					 outtextxy(10,340," 30.   Mo    Molybdenum  42        95.94        Solid : Transition metal");
+					 outtextxy(10,360," 31.   Tc    Technitium  43        96           Solid : Transition metal");
+					 outtextxy(10,380," 32.   Ru    Ruthenium   44        101.07       Solid : Transition metal");
+					 outtextxy(10,400," 33.   Rh    Rhodium     45        102.91       Solid : Transition metal");
+					 outtextxy(10,420," 34.   Pd    Paladium    46        106.42       Solid : Transition metal");
+					 outtextxy(10,440," 35.   Ag    Silver      47        107.87       Solid : Transition metal");
+					  ch=getch();
+
+
+			switch (ch)
+
+			{	case'\r': goto label10;
+
+
+				//case 'q': exit(0);
+
+				//case 'Q': exit(0);
+
+				case '\b': goto label8;
+
+
+			default:
+				clrscr();
+				  outtextxy(20,20,"wrong choice");
+				  outtextxy(20,40,"plz choose again");
+				  getch();
+				  goto label9;
+		    }
+
+
+	  label10:			 clrscr();
+					 settextstyle(3,0,5);
+					 outtextxy(200,10,"SOLIDS");
+					 settextstyle(11,0,3);
+
+					 outtextxy(10,80, "SrNo. Symbol   Name    Atomic no. Atomic mass    Physical State");
+					 outtextxy(10,100," 36.   Cd    Cadmium     48        112.41      Solid : Metal");
+					 outtextxy(10,120," 37.   In    Indium      49        114.82      Solid : Metal");
+					 outtextxy(10,140," 38.   Sn    Tin         50        118.71      Solid : Metal");
+					 outtextxy(10,160," 39.   Sb    Antimony    51        121.76      Solid : Semimetal");
+					 outtextxy(10,180," 40.   Te    Telenium    52        127.60      Solid : Semimetal");
+					 outtextxy(10,200," 41.   I     Iodine      53        126.90      Solid : Halogen element");
+					 outtextxy(10,220," 42.   Cs    Caesium     55        132.91      Solid : Alkali metal");
+					 outtextxy(10,240," 43.   Ba    Barium      56        137.33      Solid : Alkaline Earth metal");
+					 outtextxy(10,260," 44.   La-Lu Lanthanoids 57-71     138-175     Solid or Synthetic");
+					 outtextxy(10,280," 45.   Hf    Hafnium     72        178.49      Solid : Transition metal");
+					 outtextxy(10,300," 46.   Ta    Tantalium   73        180.95      Solid : Transition metal");
+					 outtextxy(10,320," 47.   W     Tungsten    74        183.84      Solid : Transition metal");
+					 outtextxy(10,340," 48.   Re    Rhenium     75        186.21      Solid : Transition metal");
+					 outtextxy(10,360," 49.   Os    Osmium      76        190.23      Solid : Transition metal");
+					 outtextxy(10,380," 50.   Ir    Iridium     77        192.22      Solid : Transition metal");
+					 outtextxy(10,400," 51.   Pt    Platinum    78        195.08      Solid : Transition metal");
+					 outtextxy(10,420," 52.   Au    Gold        79        196.97      Solid : Transition metal");
+					 outtextxy(10,440," 53.   Tl    Thallium    81        204.38      Solid : Metal");
+					 ch=getch();
+
+
+			switch (ch)
+
+			{	case'\r': goto label11;
+
+
+				//case 'q': exit(0);
+
+				//case 'Q': exit(0);
+
+				case '\b': goto label9;
+
+
+			default:
+				clrscr();setcolor(5);
+				  outtextxy(20,20,"wrong choice");
+				  outtextxy(20,40,"plz choose again");
+				  getch();
+				  goto label10;
+		    }
+
+	      label11:			  clrscr();
+					 settextstyle(3,0,5);
+					 outtextxy(200,10,"SOLIDS");
+					 settextstyle(11,0,3);
+
+					 outtextxy(10,80, " SrNo. Symbol   Name    Atomic no. Atomic mass    Physical State");
+					 outtextxy(10,100," 54.   Pb    Lead        82        207.2       Solid : Metal");
+					 outtextxy(10,120," 55.   Bi    Bismuth     83        208.96      Solid : Metal");
+					 outtextxy(10,140," 56.   Po    Polonium    84        209         Solid : Semimetal");
+					 outtextxy(10,160," 57.   At    Astatine    85        210         Solid : Halogen element");
+					 outtextxy(10,180," 58.   Fr    Francium    87        223         Solid : Alkali metal");
+					 outtextxy(10,200," 59.   Ra    Radium      88        226         Solid : Alkaline earth metal");
+					 outtextxy(10,220," 60.   Ac-Lr Actinoids   89-103    227-262     Solid or Synthetic");
+
+					 ch=getch();
+
+
+			switch (ch)
+
+			{	case'\r': goto label4;
+
+
+				//case 'q': exit(0);
+
+				//case 'Q': exit(0);
+
+				case '\b': goto label10;
+
+
+			default:
+				clrscr();
+				  outtextxy(20,20,"wrong choice");
+				  outtextxy(20,40,"plz choose again");
+				  getch();
+				  goto label11;
+		    }
+
+
+
+				  case 'b':clrscr();
+					settextstyle(3,0,5);
+					outtextxy(200,10,"LIQUIDS");
+					settextstyle(11,0,3);
+					outtextxy(10,80, "Following elements are Liquids");
+					outtextxy(10,100, " SrNo. Symbol   Name    Atomic no. Atomic mass    Physical State");
+					outtextxy(10,140," 2. Br     Bromine      35        79.904      Liquid: Non Metal Halogen");
+					outtextxy(10,120," 1. Hg     Mercury      80        200.59      Liquid: Metal");
+					getch();
+					goto label4;
+
+				  case 'c':clrscr();settextstyle(3,0,5);
+					 outtextxy(200,10,"GASES");
+					 settextstyle(11,0,3);
+					outtextxy(10,80,"Following elements are Gases");
+					outtextxy(10,100," SrNo. Symbol  Name    Atomic no. Atomic mass  Physical State");
+					outtextxy(10,120," 1.     H     Hydrogen    1         1.0079       Gas");
+					outtextxy(10,140," 2.     He    Helium      2         4.0026       Noble Gas");
+					outtextxy(10,160," 5.     N     Nitrogen    7         14.007       Gas      : Non metal");
+					outtextxy(10,180," 6.     O     Oxygen      8         15.999       Gas      : Non metal :Chalcogen");
+					outtextxy(10,200," 7.     F     Fluorine    9         18.998       Gas      : Non metal :Halogen");
+					outtextxy(10,220," 8.     Ne    Neon        10        20.180       NobleGas : Non metal");
+					outtextxy(10,240," 7.     Cl    Chlorine    17        35.453       Gas      : Halogen");
+					outtextxy(10,260," 8.     Ar    Argon       18        39.948       Gas      : Noble gas");
+					outtextxy(10,280," 9.     Kr    Krypton     36        83.80        Gas      : Noble gas");
+					outtextxy(10,300," 10.    Xe    Xenon       54        131.29       Gas      : Noble gas");
+					outtextxy(10,320," 11.    Rn    Radon       86        222          Gas      : Noble gas");
+					getch();
+					goto label4;
+
+				  case 'd':clrscr();
+				outtextxy(150,10, "Following elements are Synthetics");
+				outtextxy(10,20,  " SrNo. Symbol     Name    Atomic no. Atomic mass      Physical State");
+				outtextxy(10,40,  " 1.      Rf   Rutherfordium 104        261       Synthetic : Transition metal");
+				outtextxy(10,60,  " 2.      Db   Dubnium       105        262       Synthetic : Transition metal");
+				outtextxy(10,80,  " 3.      Sg   Seaborgium    106        266       Synthetic : Transition metal");
+				outtextxy(10,100, " 4.      Bh   Bohrium       107        264       Synthetic : Transition metal");
+				outtextxy(10,120, " 5.      Hs   Hassium       108        277       Synthetic : Transition metal");
+				outtextxy(10,140, " 6.      Mt   Meitnerium    109        268       Synthetic : Transition metal");
+				outtextxy(10,160, " 7.     Uun   Ununnilium    110        281       Synthetic : Transition metal");
+				outtextxy(10,180, " 8.     Uuu   Unununium     111        272       Synthetic : Transition metal");
+				outtextxy(10,200, " 9.     Uub   Ununbium      112        285       Synthetic : Metal");
+				outtextxy(10,220, " 10.    Uuq   Ununquadium   114        289       Synthetic : Metal");
+				outtextxy(10,240, " 11.     Pm   Promethium     61        145       Synthetic : Transition metal");
+				outtextxy(10,260, " 12.     Np   Neptunium      93        237       Synthetic : Transition metal");
+				outtextxy(10,280, " 13.     Pu   Plutonium      94        244       Synthetic : Transition metal");
+				outtextxy(10,300, " 14.     Am   Americium      95        243       Synthetic : Transition metal");
+				outtextxy(10,320, " 15.     Cm   Curium         96        247       Synthetic : Transition metal");
+				outtextxy(10,340, " 16.     Bk   Berkelium      97        247       Synthetic : Transition metal");
+				outtextxy(10,360, " 17.     Cf   Californium    98        251       Synthetic : Transition metal");
+				outtextxy(10,380, " 18.     Es   Einsteinium    99        252       Synthetic : Transition metal");
+				outtextxy(10,400, " 19.     Fm   Fermium       100        257       Synthetic : Metal");
+				outtextxy(10,420, " 20.     Md   Mendelivium   101        258       Synthetic : Metal");
+				outtextxy(10,440, " 21.     No   Nobelium      102        259       Synthetic : Transition metal");
+				outtextxy(10,460, " 22.     Lr   Lawrencium    103        262       Synthetic : Transition metal");
+				 getch();
+					  goto label4;
+
+				  case '\b':goto label4;
+
+				  default:clrscr();
+				  outtextxy(20,20,"wrong choice");
+				  outtextxy(20,40,"plz choose again");
+				  getch();
+				  goto label7;
+
+			      }
+
+
+			case 'd':cout<<"(d) Enter the atomic number";
+				 break;
+
+			case 'e':cout<<"(e) Enter the atomic mass ";
+				 break;
+
+			case 'f':cout<<"(f) Enter the block (s, p, d or f)";
+				 break;
+
+			case 'g':goto label3;
+
+			case 'h':cout<<"(h) ";
+				 break;
+
+			case 'q':exit(0);
+
+
+		default :clrscr();
+		outtextxy(20,20,"You entered a wrong choice");
+			  getch();
+			  goto label4;
+		}
+
+
+ }
+
+}
+
+
+closegraph();
+
+getch();
+
+return 0;
+}
+
